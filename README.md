@@ -1,6 +1,6 @@
 # Driftverk SDK
 
-A dependency-free, server-side Node.js 22+ client with TypeScript declarations. The first npm release is pending. Until then, clone this repository and install its directory with `npm install /absolute/path/to/driftverk-sdk`. After publication, install it with `npm install @driftverk/sdk`.
+A dependency-free, server-side Node.js 22+ client with TypeScript declarations. Install it with `npm install @driftverk/sdk`.
 
 ```js
 import { Driftverk } from '@driftverk/sdk';

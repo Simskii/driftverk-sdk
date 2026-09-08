@@ -2,20 +2,11 @@
 
 This repository owns the npm package `@driftverk/sdk`. Make SDK changes here. The SDK directory in the private control-plane repository is the original copy and does not synchronize automatically.
 
-## One-time npm setup
+## npm setup
 
-1. Sign in to an npm account that can publish under the `@driftverk` scope. Create or join that npm organization if needed.
-2. From this checkout, run `npm ci`, `npm login`, then `npm publish --access public`. Complete npm's authentication prompt. This creates version 0.1.0.
-3. In the npm package settings, add a GitHub Actions trusted publisher with these exact values:
-   - Organization or user: `Simskii`
-   - Repository: `driftverk-sdk`
-   - Workflow filename: `publish.yml`
-   - Environment: leave empty
-   - Allowed action: `npm publish`
-4. Set the GitHub repository Actions variable `NPM_PUBLISH_ENABLED` to `true`.
-5. Update the README and the website SDK installation guide once the npm package is available.
+The package is public on npm. Trusted publishing is configured for `Simskii/driftverk-sdk` and `.github/workflows/publish.yml`, with direct publishing allowed. The repository variable `NPM_PUBLISH_ENABLED` is set to `true`.
 
-Trusted publishing uses GitHub OIDC. No npm token is stored in this repository or in GitHub secrets. See [npm's trusted publishing documentation](https://docs.npmjs.com/trusted-publishers/).
+GitHub Actions uses OIDC to publish without an npm token. The trust configuration can be inspected with `npm trust list @driftverk/sdk`. See [npm's trusted publishing documentation](https://docs.npmjs.com/trusted-publishers/).
 
 ## Subsequent releases
 
