@@ -113,3 +113,7 @@ Environment deletion can also proceed when an execution is active or unreachable
 
 
 See [RELEASING.md](./RELEASING.md) for npm setup and automatic releases.
+
+## License
+
+[MIT](./LICENSE), copyright 2026 Simon Lundh.

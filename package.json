@@ -35,7 +35,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "7.0.2",
     "@types/node": "22.20.1"
