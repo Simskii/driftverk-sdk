@@ -1,0 +1,43 @@
+{
+  "name": "@driftverk/sdk",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test *.test.mjs",
+    "check": "tsc --noEmit --strict --module NodeNext --target ES2023 --skipLibCheck types.test.mts",
+    "prepublishOnly": "npm run check && npm test"
+  },
+  "description": "Dependency-free Node.js client for the Driftverk API",
+  "files": [
+    "index.mjs",
+    "index.d.ts",
+    "examples/",
+    "RELEASING.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simskii/driftverk-sdk.git"
+  },
+  "homepage": "https://app.driftverk.com/docs/sdk",
+  "bugs": {
+    "url": "https://github.com/Simskii/driftverk-sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/node": "22.20.1"
+  }
+}
